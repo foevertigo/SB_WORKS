@@ -1,4 +1,5 @@
 SB Works - Freelancing Marketplace (MERN Stack)
+![SB Works Screenshot](https://github.com/foevertigo/SB_WORKS/blob/cbdccf740c5cb402c480c6633846fdbfb2c07ada/screenshots/Screenshot%202025-02-27%20192646.png)
 
 
 
