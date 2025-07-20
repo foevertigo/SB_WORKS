@@ -118,5 +118,8 @@ API Routes (🔑 User Authentication)
     GET /api/chat/:projectId - Retrieve messages
 
 
+🌐 Deployed URLs
+Frontend: https://sb-works-qtbjhfpei-foevertigos-projects.vercel.app
 
+Backend API: https://sb-works.onrender.com
     
