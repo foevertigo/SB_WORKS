@@ -7,6 +7,9 @@ import { Application, Chat, Freelancer, Project, User } from './Schema.js';
 import { Server } from 'socket.io';
 import http from 'http';
 import SocketHandler from './SocketHandler.js';
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 const app = express();
 
@@ -32,9 +35,9 @@ io.on("connection", (socket) =>{
 })
 
 
-const PORT = 6001;
+const PORT = process.env.PORT || 6001;
 
-mongoose.connect('mongodb://localhost:27017/Freelancing',{
+mongoose.connect(process.env.MONGO_URI,{
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(()=>{
@@ -314,8 +317,6 @@ mongoose.connect('mongodb://localhost:27017/Freelancing',{
             project.manulaLink = manualLink;
             project.submissionDescription = submissionDescription;
             project.submission = true;
-
-            await project.save();
 
             await project.save();
             res.status(200).json({message: "Project added"});
