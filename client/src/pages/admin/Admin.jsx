@@ -19,7 +19,7 @@ const Admin = () => {
   },[])
 
   const fetchProjects = async() =>{
-      await axios.get("http://localhost:6001/fetch-projects").then(
+      await axios.get("https://sb-works.onrender.com/fetch-projects").then(
         (response)=>{
             setProjectsCount(response.data.length);
             const comPros = response.data.filter((pro)=> pro.status === "Completed");
@@ -31,7 +31,7 @@ const Admin = () => {
   }
 
   const fetchApplications = async() =>{
-    await axios.get("http://localhost:6001/fetch-applications").then(
+    await axios.get("https://sb-works.onrender.com/fetch-applications").then(
       (response)=>{
           setApplicationsCount(response.data.length);
       }
@@ -41,7 +41,7 @@ const Admin = () => {
 }
 
 const fetchUsers = async() =>{
-  await axios.get("http://localhost:6001/fetch-users").then(
+  await axios.get("https://sb-works.onrender.com/fetch-users").then(
     (response)=>{
         setUsersCount(response.data.length);
     }

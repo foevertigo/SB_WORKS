@@ -43,7 +43,7 @@ const ProjectWorking = () => {
   },[])
 
   const fetchProject = async(id) =>{
-    await axios.get(`http://localhost:6001/fetch-project/${id}`).then(
+    await axios.get(`https://sb-works.onrender.com/fetch-project/${id}`).then(
       (response)=>{
         setProject(response.data);
         setProjectId(response.data._id);
@@ -57,7 +57,7 @@ const ProjectWorking = () => {
 
 
   const handleApproveSubmission = async() =>{
-    await axios.get(`http://localhost:6001/approve-submission/${params['id']}`).then(
+    await axios.get(`https://sb-works.onrender.com/approve-submission/${params['id']}`).then(
       (response)=>{
         fetchProject(params['id']);
         alert("Submission approved!!");
@@ -68,7 +68,7 @@ const ProjectWorking = () => {
   }
 
   const handleRejectSubmission = async() =>{
-    await axios.get(`http://localhost:6001/reject-submission/${params['id']}`).then(
+    await axios.get(`https://sb-works.onrender.com/reject-submission/${params['id']}`).then(
       (response)=>{
         fetchProject(params['id']);
         alert("Submission rejected!!");
@@ -96,7 +96,7 @@ const ProjectWorking = () => {
 
   const [chats, setChats] = useState();
   const fetchChats = async() =>{
-    await axios.get(`http://localhost:6001/fetch-chats/${params['id']}`).then(
+    await axios.get(`https://sb-works.onrender.com/fetch-chats/${params['id']}`).then(
       (response) =>{
         setChats(response.data);
       }

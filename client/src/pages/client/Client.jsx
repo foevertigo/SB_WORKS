@@ -16,7 +16,7 @@ const Client = () => {
   },[])
 
   const fetchProjects = async()=>{
-    await axios.get('http://localhost:6001/fetch-projects').then(
+    await axios.get('https://sb-works.onrender.com/fetch-projects').then(
       (response)=>{
           let pros = response.data.filter(pro => pro.clientId === localStorage.getItem('userId'));
           setProjects(pros);

@@ -23,7 +23,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: '*',
+        origin: 'https://sb-works-ch8qerbd8-foevertigos-projects.vercel.app',
         methods: ['GET', 'POST', 'PUT', 'DELETE']
     }
 });
